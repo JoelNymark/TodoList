@@ -14,17 +14,21 @@
       rel="stylesheet"
     />
 
-    <title>Document</title>
+    <title>Todo List</title>
   </head>
-  <body>
+  <body onload="getlocalStorage('allCards')">
     <div class="container">
       <h2 class="Title-Text">To do list</h2>
       <div class="card-container">
-        <div class="card-title">List</div>
-        <div class="card-list">This is the content of the list</div>
-        <input type="text" class="card-text-area" placeholder="Enter a todo items name here"></input>
-        <button class="card-btn">Add item</button>
+        <div class="card-title">To do list</div>
+        <div class="card-list">
+          <ul id="card-ul">
+          </ul>
+        </div>
+        <input type="text" id="text-input" class="card-text-area" placeholder="Enter a todo items name here" autofocus></input>
+        <button class="card-btn" onclick="addListItem()">Add item</button>
       </div>
     </div>
   </body>
+  <script src="script.js"></script>
 </html>

@@ -10,6 +10,18 @@ body {
   height: 100vh;
 }
 
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: aliceblue;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #333;
+}
+
 .container {
   display: flex;
   flex-direction: column;
@@ -39,11 +51,10 @@ body {
 }
 
 .card-list {
-  display: grid;
-  align-content: center;
-  justify-content: center;
-  grid-area: 2 / 1 / span 4 / span 1;
+  grid-area: 2 / 1 / span 3 / span 1;
   background-color: aliceblue;
+  overflow-x: hidden;
+  max-height: 30rem;
 }
 
 .card-text-area {
@@ -65,7 +76,6 @@ body {
   text-decoration: none;
   text-transform: uppercase;
   font-family: "Poppins", sans-serif;
-  letter-spacing: 2px;
   cursor: pointer;
   transition: all 0.3s;
 }
@@ -76,6 +86,45 @@ body {
 
 .card-btn:active {
   background-color: rgb(0, 0, 200);
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  position: relative;
+  list-style: none;
+}
+
+.card-item {
+  background-color: rgb(87, 87, 87);
+  color: aqua;
+  padding: 10px 20px;
+  color: #ffffff;
+  border-radius: 4px;
+  margin-top: 0.5rem;
+  background: #4eb9cd;
+  transition: all 0.75s;
+}
+
+.card-list ul li button {
+  background-color: rgb(128, 128, 128);
+  border-radius: 4px;
+  position: absolute;
+  right: 1rem;
+  display: inline-block;
+  height: 1.5rem;
+  width: 1.5rem;
+  border: none;
+}
+
+.card-list ul li button:hover {
+  background-color: rgb(163, 162, 162);
+}
+
+.card-list ul li button:active {
+  background-color: rgb(209, 209, 209);
 }
 
 input[type="text"] {
